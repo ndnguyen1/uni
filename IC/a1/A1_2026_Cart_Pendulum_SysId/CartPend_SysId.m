@@ -84,7 +84,7 @@ alpha(:,1) = logsout{2}.Values.Data(Nini:end-1);
 xc = logsout{3}.Values.Data(Nini:end-1);
 xc = squeeze(xc);
 alpha = squeeze(alpha);
-
+alpha_rad = deg2rad(alpha);
 
 %% sampling time from Teensy 4.1
 ts = time(2);
@@ -176,9 +176,9 @@ Bd_kin = zeros(4, 1);
 x_hat = zeros(4, 1);
 x_hat_stored = zeros(4, N);
 
-for k = 1:N t 
+for k = 1:N 
     x_pred_hat = Ad_kin * x_hat + Bd_kin * Vm(k);
-    x_hat = x_pred_hat + M_kal * ([xc(k); alpha(k)] - Cd * x_pred_hat);
+    x_hat = x_pred_hat + M_kal * ([xc(k); alpha_rad(k)] - Cd * x_pred_hat);
     x_hat_stored(:,k) = x_hat;
 end
 
@@ -191,7 +191,7 @@ grid
 
 subplot(412)
 plot(time, x_hat_stored(2,:), 'LineWidth', 2)
-ylabel('alpha estimate')
+ylabel('alpha_rad estimate')
 grid
 
 subplot(413)
@@ -223,7 +223,7 @@ grid
 
 subplot(412)
 plot(time, x_hat_smooth(2,:), 'LineWidth', 2)
-ylabel('alpha smoothed')
+ylabel('alpha_rad smoothed')
 grid
 
 subplot(413)
@@ -236,3 +236,96 @@ plot(time, x_hat_smooth(4,:), 'LineWidth', 2)
 ylabel('omega smoothed')
 grid
 xlabel('Time (s)')
+
+% separating out all the smoothed data
+xc_s = x_hat_smooth(1, :);
+alpha_rad_s = x_hat_smooth(2, :);
+vc_s = x_hat_smooth(3, :);
+omega_s = x_hat_smooth(4, :);
+
+% calculating theta at each step
+A_l = zeros(2*(N-1), 8);
+b_l = zeros(2*(N-1), 1);
+
+for k = 1:N-1
+    row = 2*k - 1;
+    A_l(row,   :) = ts * [alpha_rad_s(k), -vc_s(k), omega_s(k),  Vm(k),       0,          0,           0,        0   ];
+    A_l(row+1, :) = ts * [     0,          0,        0,         0,    -alpha_rad_s(k), vc_s(k),  -omega_s(k), -Vm(k)  ];
+    b_l(row)   = vc_s(k+1)    - vc_s(k);
+    b_l(row+1) = omega_s(k+1) - omega_s(k);
+end
+
+% Condition number before solving
+sv = svd(A_l);
+fprintf('A_l condition number: %.2e\n', sv(1)/sv(end));
+fprintf('A_l rank:             %d / 8\n', rank(A_l));
+fprintf('omega_s vs vc_s corr: %.4f  (near 1 => ill-conditioned)\n', ...
+    corr(omega_s', vc_s'));
+
+% Singular value plot — gaps show unidentifiable directions
+figure(105)
+semilogy(sv, 'o-', 'LineWidth', 2)
+title('Singular values of A\_l (large gap = rank deficiency)')
+xlabel('Index'); ylabel('Singular value'); grid
+
+% Offline LS (plain backslash — may be ill-conditioned)
+theta_hat_ls = A_l \ b_l;
+
+% Ridge regression — stabilises the ill-conditioned system.
+% Rule of thumb: lambda ~ (noise std)^2 * N.  Tune by checking physical signs.
+% Start at 1e-3 and decrease until theta(1),theta(4),theta(5),theta(8) are all
+% positive.  If cond(A_l) >> 1e6 you may need lambda up to 1e0.
+lambda = 1e-3;
+theta_hat = (A_l'*A_l + lambda*eye(8)) \ (A_l'*b_l);
+
+fprintf('\nPhysical checks (all four should be > 0):\n');
+fprintf('  theta(1) gm/M      = %8.4f  (plain LS: %8.4f)\n', theta_hat(1),  theta_hat_ls(1));
+fprintf('  theta(4) Kf/M      = %8.4f  (plain LS: %8.4f)\n', theta_hat(4),  theta_hat_ls(4));
+fprintf('  theta(5) (M+m)g/Ml = %8.4f  (plain LS: %8.4f)\n', theta_hat(5),  theta_hat_ls(5));
+fprintf('  theta(8) Kf/(Ml)   = %8.4f  (plain LS: %8.4f)\n', theta_hat(8),  theta_hat_ls(8));
+
+disp('Part F - Offline LS (ridge) identified parameters:')
+disp(theta_hat)
+
+% Part G: Offline Recursive Least Squares
+% At each time step k we get 2 new measurement rows (vc and omega equations).
+% Standard RLS update with a 2-row observation at each step.
+
+theta_rls = zeros(8, 1);
+P_rls = eye(8) * 1e6;   % large initial covariance = uninformed prior
+theta_rls_stored = zeros(8, N-1);
+
+for k = 1:N-1
+    Phi_k = ts * [alpha_rad_s(k), -vc_s(k),  omega_s(k),  Vm(k),           0,          0,           0,        0;
+                       0,              0,          0,         0,   -alpha_rad_s(k), vc_s(k), -omega_s(k), -Vm(k)];
+    y_k = [vc_s(k+1) - vc_s(k); omega_s(k+1) - omega_s(k)];
+
+    K_rls = P_rls * Phi_k' / (eye(2) + Phi_k * P_rls * Phi_k');
+    theta_rls = theta_rls + K_rls * (y_k - Phi_k * theta_rls);
+    P_rls = (eye(8) - K_rls * Phi_k) * P_rls;
+
+    theta_rls_stored(:, k) = theta_rls;
+end
+
+disp('Part G - RLS final identified parameters:')
+disp(theta_rls)
+
+% plot RLS convergence vs offline LS result
+theta_labels = {'\theta_1: gm/M', '\theta_2: bc/M', '\theta_3: bp/(Ml)', '\theta_4: Kf/M', ...
+                '\theta_5: (M+m)g/(Ml)', '\theta_6: bc/(Ml)', '\theta_7: (M+m)bp/(Mml^2)', '\theta_8: Kf/(Ml)'};
+
+figure(104)
+for i = 1:8
+    subplot(4, 2, i)
+    plot(time(1:N-1), theta_rls_stored(i,:), 'LineWidth', 1.5)
+    hold on
+    yline(theta_hat(i), 'r--', 'LineWidth', 1.5)
+    hold off
+    ylabel(theta_labels{i}, 'Interpreter', 'tex')
+    grid
+    if i >= 7
+        xlabel('Time (s)')
+    end
+end
+sgtitle('Part G: RLS convergence (blue) vs Offline LS (red dashed)')
+
