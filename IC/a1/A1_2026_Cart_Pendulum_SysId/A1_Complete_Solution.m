@@ -18,36 +18,6 @@ clc; clear; close all;
 format long
 s = tf('s');
 
-%% ========================================================================
-%  LOAD & PLOT EXPERIMENTAL DATA                                    [Q1d]
-%% ========================================================================
-
-load('Teensy41_test_data_01.mat')
-
-Nini      = 1;
-time      = logsout{1}.Values.Time(Nini:end-1);
-time      = time - time(1);
-Vm        = logsout{1}.Values.Data(Nini:end-1);
-alpha     = squeeze(logsout{2}.Values.Data(Nini:end-1));
-xc        = squeeze(logsout{3}.Values.Data(Nini:end-1));
-alpha_rad = deg2rad(alpha);
-
-ts = time(2);       % sampling period (s)
-N  = length(time);
-
-figure(101)
-subplot(311)
-  plot(time, Vm, 'LineWidth', 2)
-  title('Q1d — Experimental SysId Data (pulse inputs)')
-  ylim([-8 8]); yticks([-6 0 6]); grid
-  ylabel('$u(t)$ [V]', 'Interpreter', 'latex', 'FontSize', 14)
-subplot(312)
-  plot(time, xc, 'LineWidth', 2); grid
-  ylabel('$x_c(t)$ [m]', 'Interpreter', 'latex', 'FontSize', 14)
-subplot(313)
-  plot(time, alpha, 'LineWidth', 2); grid
-  ylabel('$\alpha(t)$ [deg]', 'Interpreter', 'latex', 'FontSize', 14)
-  xlabel('Time (s)', 'FontSize', 14)
 
 %% ========================================================================
 %  Q1a — CONTINUOUS-TIME LINEARISED STATE-SPACE MODEL
@@ -114,7 +84,41 @@ subplot(313)
 %    b_l = A_l * theta,   A_l in R^(2(N-1) x 8),  b_l in R^(2(N-1))
 
 %% ========================================================================
-%  Q1e — KALMAN SMOOTHER (forward KF pass + RTS backward pass)
+%  Q1d — LOAD & PLOT EXPERIMENTAL DATA                                
+%% ========================================================================
+
+load('Teensy41_test_data_04.mat')
+
+Nini      = 1;
+time      = logsout{1}.Values.Time(Nini:end-1);
+time      = time - time(1);
+Vm        = logsout{1}.Values.Data(Nini:end-1);
+alpha     = -squeeze(logsout{2}.Values.Data(Nini:end-1));
+xc        = squeeze(logsout{5}.Values.Data(Nini:end-1))/10000;
+alpha_rad = deg2rad(alpha);
+
+ts = time(2);       % sampling period (s)
+N  = length(time);
+
+figure(101)
+subplot(311)
+  plot(time, Vm, 'LineWidth', 2)
+  title('Q1d — Experimental SysId Data (pulse inputs)')
+  ylim([-8 8]); yticks([-6 0 6]); grid
+  ylabel('$u(t)$ [V]', 'Interpreter', 'latex', 'FontSize', 14)
+subplot(312)
+  plot(time, xc, 'LineWidth', 2); grid
+  ylabel('$x_c(t)$ [m]', 'Interpreter', 'latex', 'FontSize', 14)
+subplot(313)
+  plot(time, alpha, 'LineWidth', 2); grid
+  ylabel('$\alpha(t)$ [deg]', 'Interpreter', 'latex', 'FontSize', 14)
+  xlabel('Time (s)', 'FontSize', 14)
+
+  % U = [Vm] (voltage input vector 1xN)
+  % Y = [xc; alpha_rad] (2×N, stacking cart position and pendulum angle in radians)
+
+%% ========================================================================
+% Q1e — KALMAN SMOOTHER (forward KF pass)
 %% ========================================================================
 
 fprintf('=== Q1e: Kalman Smoother ===\n')
@@ -138,11 +142,11 @@ else
 end
 
 %  Noise covariances — encoders are clean so Rf << Qf (trust measurements)
-Qf = eye(4) * 1;
-Rf = eye(2) * 0.001;
+Qf = eye(4) * 0.1;
+Rf = eye(2) * 0.0001;
 [M_kal, P_kal, ~, ~] = dlqe(Ad_kin, eye(4), Cd, Qf, Rf);
 
-%  --- Forward Kalman filter pass ---
+%  --- Forward Kalman s ---
 Bd_kin   = zeros(4, 1);
 x_hat    = zeros(4, 1);
 x_fwd    = zeros(4, N);
@@ -154,36 +158,21 @@ for k = 1:N
     x_fwd(:,k) = x_hat;
 end
 
-%  --- Backward RTS smoother pass ---
-G_s          = P_kal * Ad_kin' / (Ad_kin * P_kal * Ad_kin' + Qf);
-x_smooth     = zeros(4, N);
-x_smooth(:,N) = x_fwd(:,N);
-
-for k = N-1:-1:1
-    x_smooth(:,k) = x_fwd(:,k) + G_s * (x_smooth(:,k+1) - Ad_kin * x_fwd(:,k));
-end
-
 %  Extract smoothed states
-xc_s    = x_smooth(1,:);
-alpha_s = x_smooth(2,:);   % rad
-vc_s    = x_smooth(3,:);
-omega_s = x_smooth(4,:);
+xc_s    = x_fwd(1,:);
+alpha_s = x_fwd(2,:);   % rad
+vc_s    = x_fwd(3,:);
+omega_s = x_fwd(4,:);
 
 %  Plots
-figure(102)
-sgtitle('Q1e — Forward Kalman Filter Pass')
+
+
+figure(103)
+sgtitle('Q1e — Kalman Smoother')
 subplot(411); plot(time, x_fwd(1,:), 'LineWidth', 2); ylabel('xc (m)'); grid
 subplot(412); plot(time, x_fwd(2,:), 'LineWidth', 2); ylabel('\alpha (rad)'); grid
 subplot(413); plot(time, x_fwd(3,:), 'LineWidth', 2); ylabel('vc (m/s)'); grid
 subplot(414); plot(time, x_fwd(4,:), 'LineWidth', 2); ylabel('\omega (rad/s)'); grid
-xlabel('Time (s)')
-
-figure(103)
-sgtitle('Q1e — Kalman Smoother (RTS backward pass)')
-subplot(411); plot(time, x_smooth(1,:), 'LineWidth', 2); ylabel('xc (m)'); grid
-subplot(412); plot(time, x_smooth(2,:), 'LineWidth', 2); ylabel('\alpha (rad)'); grid
-subplot(413); plot(time, x_smooth(3,:), 'LineWidth', 2); ylabel('vc (m/s)'); grid
-subplot(414); plot(time, x_smooth(4,:), 'LineWidth', 2); ylabel('\omega (rad/s)'); grid
 xlabel('Time (s)')
 
 %% ========================================================================
@@ -218,46 +207,15 @@ semilogy(sv, 'o-', 'LineWidth', 2)
 title('Q1f — Singular values of A\_l  (large gap => rank deficiency)')
 xlabel('Index'); ylabel('Singular value'); grid
 
-%  Plain least-squares
-theta_ls = A_l \ b_l;
+%  Least-squares solution
+theta_hat = A_l \ b_l;
 
 theta_labels = {'gm/M',         'bc/M',    'bp/(Ml)',    'Kf/M', ...
                 '(M+m)g/(Ml)',  'bc/(Ml)', '(M+m)bp/(Mml^2)', 'Kf/(Ml)'};
 
-%  Ridge regression — regularises ill-conditioned problem.
-%  Auto-search for smallest lambda that gives physically correct signs AND
-%  an unstable eigenvalue in the continuous-time model (required for LQR).
-%  Physical requirement: theta(1), theta(4), theta(5), theta(8) > 0
-%                        and Ac_id has at least one positive real eigenvalue.
-lambda_candidates = [1e-4, 1e-3, 1e-2, 1e-1, 1, 10, 100];
-theta_hat = [];
-lambda    = NaN;
-
-for lam = lambda_candidates
-    th_try = (A_l'*A_l + lam*eye(8)) \ (A_l'*b_l);
-    Ac_try = [0,       0,        1,        0;
-              0,       0,        0,        1;
-              0,       th_try(1), -th_try(2), th_try(3);
-              0,      -th_try(5), th_try(6), -th_try(7)];
-    signs_ok  = all([th_try(1), th_try(4), th_try(5), th_try(8)] > 0);
-    unstable  = any(real(eig(Ac_try)) > 0);
-    if signs_ok && unstable
-        theta_hat = th_try;
-        lambda    = lam;
-        break
-    end
-end
-
-if isempty(theta_hat)
-    warning('No lambda found that gives a physically valid model. Using lambda=1e-3.')
-    lambda    = 1e-3;
-    theta_hat = (A_l'*A_l + lambda*eye(8)) \ (A_l'*b_l);
-end
-
-fprintf('Ridge regression lambda selected: %.0e\n', lambda)
-fprintf('\n  %-28s  %12s  %12s\n', 'Parameter', 'Ridge LS', 'Plain LS')
+fprintf('\n  %-28s  %12s\n', 'Parameter', 'LS')
 for i = 1:8
-    fprintf('  theta(%d)  %-22s  %12.6f  %12.6f\n', i, theta_labels{i}, theta_hat(i), theta_ls(i))
+    fprintf('  theta(%d)  %-22s  %12.6f\n', i, theta_labels{i}, theta_hat(i))
 end
 
 fprintf('\nPhysical sign checks (all should be > 0):\n')
