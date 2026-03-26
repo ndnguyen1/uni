@@ -1,0 +1,25 @@
+%implements s34_b0_hejje_0_BlockInstanceSetup "C"
+
+%function BlockInstanceSetup(block, system) Output
+%% Subsystems with iterators in IR:
+%% TLC Block Registration buffer:
+%<LibAddToCommonIncludes("MW_arduino_digitalio.h")>
+%<LibAddToCommonIncludes("MW_AnalogIn.h")>
+%<LibAddToCommonIncludes("MW_AnalogIn.h")>
+%<LibAddToCommonIncludes("MW_AnalogIn.h")>
+%<LibAddToCommonIncludes("MW_AnalogIn.h")>
+%<LibAddToCommonIncludes("MW_AnalogIn.h")>
+%<LibAddToCommonIncludes("MW_arduino_digitalio.h")>
+%<LibAddToCommonIncludes("MW_arduino_digitalio.h")>
+%<LibAddToCommonIncludes("MW_arduino_digitalio.h")>
+%<LibAddToCommonIncludes("MW_arduino_digitalio.h")>
+%<LibAddToCommonIncludes("MW_arduino_digitalio.h")>
+%<LibAddToCommonIncludes("MW_arduino_digitalio.h")>
+%<LibAddToCommonIncludes("MW_arduino_digitalio.h")>
+%<LibAddToCommonIncludes("MW_arduino_digitalio.h")>
+%<LibAddToCommonIncludes("MW_PWM.h")>
+%<LibAddToCommonIncludes("MW_PWM.h")>
+%<LibAddToCommonIncludes("MW_PWM.h")>
+%<LibAddToCommonIncludes("MW_PWM.h")>
+%% END  Block Registration buffer
+%endfunction

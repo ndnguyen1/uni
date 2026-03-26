@@ -1,0 +1,62 @@
+%implements s34_b0_hejje_TLCInterface "C"
+
+%function getSystemSystemInitializeFcnCallInfo_28_12_6_5_12_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "SystemInitialize"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemSystemResetFcnCallInfo_28_12_6_5_12_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "SystemReset"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemOutputFcnCallInfo_28_12_6_5_12_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "Outputs"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemSystemInitializeFcnCallInfo_28_17_6_5_21_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "SystemInitialize"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemSystemResetFcnCallInfo_28_17_6_5_21_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "SystemReset"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemOutputFcnCallInfo_28_17_6_5_21_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "Outputs"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemSystemInitializeFcnCallInfo_28_20_6_5_15_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "SystemInitialize"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemSystemResetFcnCallInfo_28_20_6_5_15_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "SystemReset"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemOutputFcnCallInfo_28_20_6_5_15_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "Outputs"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemSystemInitializeFcnCallInfo_28_23_6_5_18_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "SystemInitialize"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemSystemResetFcnCallInfo_28_23_6_5_18_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "SystemReset"; Args [] }
+%return fcnInfo
+%endfunction
+%function getSystemOutputFcnCallInfo_28_23_6_5_18_0(opaqueBlk) void
+%assign _modelSS = ""
+%createrecord fcnInfo { Name "Outputs"; Args [] }
+%return fcnInfo
+%endfunction

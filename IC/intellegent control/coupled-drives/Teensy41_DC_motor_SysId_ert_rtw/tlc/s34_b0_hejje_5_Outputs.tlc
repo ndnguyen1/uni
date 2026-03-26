@@ -1,0 +1,48 @@
+%implements s34_b0_hejje_5_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+
+boolean_T c_value;
+boolean_T c_value_p;
+%closefile localVarDecl
+%assign _modelSS = ""
+
+%<SLibGenerateExtModeOutput(system)>
+/* MATLABSystem: '<S18>/Digital Input6' */
+c_value = readDigitalPin(35);
+/* MATLABSystem: '<S18>/Digital Input7' */
+c_value_p = readDigitalPin(33);
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[11], "Output",6)
+/* MATLAB Function: '<S18>/MATLAB Function1' incorporates:
+ *  MATLABSystem: '<S18>/Digital Input6'
+ *  MATLABSystem: '<S18>/Digital Input7'
+ * */
+%if SLibCG_SystemFcnArgAccessed("fgtekjfwko",11,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("fgtekjfwko", ["%<_modelSS>", "c_value", "c_value_p", "&f1z2or5l1uw.bjftzf3sjk", "&iwjjzndxpci.bjftzf3sjk"], 11, 3, 6, 6, 6, 28)>\
+%assign ss = ::CompiledModel.System[11]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+iwjjzndxpci.ptckqls14q = 4;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput6LocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 3, fcnProtoType)>
+%endfunction

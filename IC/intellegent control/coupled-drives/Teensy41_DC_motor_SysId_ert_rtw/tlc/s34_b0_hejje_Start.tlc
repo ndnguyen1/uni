@@ -1,0 +1,362 @@
+%implements s34_b0_hejje_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcSetupRuntimeResourcesFcnOfS28B6 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 6, 6, 6, 0)
+%assign tlcSetupRuntimeResourcesFcnOfS28B7 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 7, 6, 6, 1)
+%assign tlcSetupRuntimeResourcesFcnOfS28B8 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 8, 6, 6, 2)
+%assign tlcSetupRuntimeResourcesFcnOfS28B9 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 9, 6, 6, 3)
+%assign tlcSetupRuntimeResourcesFcnOfS28B10 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 10, 6, 6, 4)
+%assign tlcSetupRuntimeResourcesFcnOfS28B14 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 14, 6, 6, 5)
+%assign tlcSetupRuntimeResourcesFcnOfS28B19 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 19, 6, 6, 6)
+%assign tlcSetupRuntimeResourcesFcnOfS28B22 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 22, 6, 6, 7)
+%assign tlcSetupRuntimeResourcesFcnOfS28B25 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 25, 6, 6, 8)
+%assign tlcSetupRuntimeResourcesFcnOfS28B26 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 26, 6, 6, 9)
+%assign tlcSetupRuntimeResourcesFcnOfS28B27 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 27, 6, 6, 10)
+%assign tlcSetupRuntimeResourcesFcnOfS28B35 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 35, 6, 6, 11)
+%assign tlcSetupRuntimeResourcesFcnOfS28B36 = OpaqueTLCBlockFcn("SetupRuntimeResources", 28, 36, 6, 6, 12)
+%assign tlcStartFcnOfS28B6 = OpaqueTLCBlockFcn("Start", 28, 6, 6, 6, 13)
+%assign tlcStartFcnOfS28B7 = OpaqueTLCBlockFcn("Start", 28, 7, 6, 6, 14)
+%assign tlcStartFcnOfS28B8 = OpaqueTLCBlockFcn("Start", 28, 8, 6, 6, 15)
+%assign tlcStartFcnOfS28B9 = OpaqueTLCBlockFcn("Start", 28, 9, 6, 6, 16)
+%assign tlcStartFcnOfS28B10 = OpaqueTLCBlockFcn("Start", 28, 10, 6, 6, 17)
+%assign tlcStartFcnOfS28B12 = OpaqueTLCBlockFcn("Start", 28, 12, 6, 6, 18)
+%assign tlcStartFcnOfS28B14 = OpaqueTLCBlockFcn("Start", 28, 14, 6, 6, 19)
+%assign tlcStartFcnOfS28B17 = OpaqueTLCBlockFcn("Start", 28, 17, 6, 6, 20)
+%assign tlcStartFcnOfS28B19 = OpaqueTLCBlockFcn("Start", 28, 19, 6, 6, 21)
+%assign tlcStartFcnOfS28B20 = OpaqueTLCBlockFcn("Start", 28, 20, 6, 6, 22)
+%assign tlcStartFcnOfS28B22 = OpaqueTLCBlockFcn("Start", 28, 22, 6, 6, 23)
+%assign tlcStartFcnOfS28B23 = OpaqueTLCBlockFcn("Start", 28, 23, 6, 6, 24)
+%assign tlcStartFcnOfS28B25 = OpaqueTLCBlockFcn("Start", 28, 25, 6, 6, 25)
+%assign tlcStartFcnOfS28B26 = OpaqueTLCBlockFcn("Start", 28, 26, 6, 6, 26)
+%assign tlcStartFcnOfS28B27 = OpaqueTLCBlockFcn("Start", 28, 27, 6, 6, 27)
+%assign tlcStartFcnOfS28B35 = OpaqueTLCBlockFcn("Start", 28, 35, 6, 6, 28)
+%assign tlcStartFcnOfS28B36 = OpaqueTLCBlockFcn("Start", 28, 36, 6, 6, 29)
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B6)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcSetupRuntimeResourcesFcnOfS28B6>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B7)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcSetupRuntimeResourcesFcnOfS28B7>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B8)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcSetupRuntimeResourcesFcnOfS28B8>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B9)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcSetupRuntimeResourcesFcnOfS28B9>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B10)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcSetupRuntimeResourcesFcnOfS28B10>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B14)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcSetupRuntimeResourcesFcnOfS28B14>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B19)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcSetupRuntimeResourcesFcnOfS28B19>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B22)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcSetupRuntimeResourcesFcnOfS28B22>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B25)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcSetupRuntimeResourcesFcnOfS28B25>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B26)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcSetupRuntimeResourcesFcnOfS28B26>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B27)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcSetupRuntimeResourcesFcnOfS28B27>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B35)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcSetupRuntimeResourcesFcnOfS28B35>\
+%endif
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS28B36)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcSetupRuntimeResourcesFcnOfS28B36>\
+%endif
+/* Start for MATLABSystem: '<S2>/Analog Input' */
+iwjjzndxpci.i4hu42h4gb.matlabCodegenIsDeleted = false;
+iwjjzndxpci.dcfykhes2o = true;
+iwjjzndxpci.i4hu42h4gb.isSetupComplete = false;
+iwjjzndxpci.i4hu42h4gb.isInitialized = 1;
+iwjjzndxpci.i4hu42h4gb.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogInSingle_Open(16U);
+iwjjzndxpci.i4hu42h4gb.isSetupComplete = true;
+/* Start for MATLABSystem: '<S2>/Analog Input1' */
+iwjjzndxpci.jrvbelfdsl.matlabCodegenIsDeleted = false;
+iwjjzndxpci.bld5fcbz55 = true;
+iwjjzndxpci.jrvbelfdsl.isSetupComplete = false;
+iwjjzndxpci.jrvbelfdsl.isInitialized = 1;
+iwjjzndxpci.jrvbelfdsl.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogInSingle_Open(17U);
+iwjjzndxpci.jrvbelfdsl.isSetupComplete = true;
+/* Start for MATLABSystem: '<S2>/Analog Input2' */
+iwjjzndxpci.dcin5spbb3.matlabCodegenIsDeleted = false;
+iwjjzndxpci.dspiyguosu = true;
+iwjjzndxpci.dcin5spbb3.isSetupComplete = false;
+iwjjzndxpci.dcin5spbb3.isInitialized = 1;
+iwjjzndxpci.dcin5spbb3.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogInSingle_Open(20U);
+iwjjzndxpci.dcin5spbb3.isSetupComplete = true;
+/* Start for MATLABSystem: '<S2>/Analog Input3' */
+iwjjzndxpci.hboj4n3sav.matlabCodegenIsDeleted = false;
+iwjjzndxpci.etort0gnic = true;
+iwjjzndxpci.hboj4n3sav.isSetupComplete = false;
+iwjjzndxpci.hboj4n3sav.isInitialized = 1;
+iwjjzndxpci.hboj4n3sav.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogInSingle_Open(21U);
+iwjjzndxpci.hboj4n3sav.isSetupComplete = true;
+/* Start for MATLABSystem: '<S2>/Analog Input4' */
+iwjjzndxpci.ilh1w3p1w5.matlabCodegenIsDeleted = false;
+iwjjzndxpci.advyx1mg0d = true;
+iwjjzndxpci.ilh1w3p1w5.isSetupComplete = false;
+iwjjzndxpci.ilh1w3p1w5.isInitialized = 1;
+iwjjzndxpci.ilh1w3p1w5.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogInSingle_Open(15U);
+iwjjzndxpci.ilh1w3p1w5.isSetupComplete = true;
+/* Start for DiscretePulseGenerator: '<S2>/Pulse Generator' */
+iwjjzndxpci.gg1cekou25 = 0;
+%if !WHITE_SPACE(tlcStartFcnOfS28B6)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcStartFcnOfS28B6>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B7)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcStartFcnOfS28B7>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B8)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcStartFcnOfS28B8>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B9)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcStartFcnOfS28B9>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B10)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcStartFcnOfS28B10>\
+%endif
+/* Start for DiscretePulseGenerator: '<S2>/Pulse Generator1' */
+iwjjzndxpci.ja22brz1p1 = 0;
+/* Start for Atomic SubSystem: '<Root>/Controller' */
+/* Start for DiscretePulseGenerator: '<S1>/Pulse Generator1' */
+iwjjzndxpci.bpwjvpzlhg = 0;
+/* Start for DiscretePulseGenerator: '<S1>/Pulse Generator' */
+iwjjzndxpci.lp4hetzdrw = 0;
+/* Start for MATLABSystem: '<S1>/Digital Output' */
+iwjjzndxpci.gq55jxne1e.matlabCodegenIsDeleted = false;
+iwjjzndxpci.atlkqoyj1f = true;
+iwjjzndxpci.gq55jxne1e.isSetupComplete = false;
+iwjjzndxpci.gq55jxne1e.isInitialized = 1;
+digitalIOSetup(13, 1);
+iwjjzndxpci.gq55jxne1e.isSetupComplete = true;
+/* End of Start for SubSystem: '<Root>/Controller' */
+
+%assign   Start_open_k2yfqomvtl_28_14 = ""
+%openfile Start_open_k2yfqomvtl_28_14
+
+/* Start for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt1' incorporates:
+ *  SubSystem: '<S2>/Subsystem2'
+ */
+%closefile Start_open_k2yfqomvtl_28_14
+
+%assign    Start_body_k2yfqomvtl_28_14 = ""
+%openfile  Start_body_k2yfqomvtl_28_14
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[12], "Start",0)
+%<SLibCGIRGenReusableSysCall("Start", [], 12, 0, 0, 0, 0, 28)>\
+%assign ss = ::CompiledModel.System[12]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%<tlcStartFcnOfS28B12>\
+%closefile Start_body_k2yfqomvtl_28_14
+
+%assign    Start_close_k2yfqomvtl_28_14 = ""
+%openfile  Start_close_k2yfqomvtl_28_14
+
+/* End of Start for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt1' */
+%closefile Start_close_k2yfqomvtl_28_14
+%<SLibCG_DumpSSCode(Start_open_k2yfqomvtl_28_14, Start_body_k2yfqomvtl_28_14, Start_close_k2yfqomvtl_28_14)>
+
+%if !WHITE_SPACE(tlcStartFcnOfS28B14)
+
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcStartFcnOfS28B14>\
+%endif
+/* Start for MATLABSystem: '<S2>/PWM1' */
+iwjjzndxpci.jhea4a3mej.matlabCodegenIsDeleted = false;
+iwjjzndxpci.hyf0dgrnvw = true;
+iwjjzndxpci.jhea4a3mej.isSetupComplete = false;
+iwjjzndxpci.jhea4a3mej.isInitialized = 1;
+iwjjzndxpci.jhea4a3mej.PWMDriverObj.MW_PWM_HANDLE = MW_PWM_Open(4U, 4000.0, 255.0);
+iwjjzndxpci.jhea4a3mej.isSetupComplete = true;
+/* Start for DiscretePulseGenerator: '<S2>/Pulse Generator4' */
+iwjjzndxpci.oifwo5l4wq = 0;
+%assign   Start_open_fbfrayfgns_28_24 = ""
+%openfile Start_open_fbfrayfgns_28_24
+
+/* Start for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt6' incorporates:
+ *  SubSystem: '<S2>/Subsystem8'
+ */
+%closefile Start_open_fbfrayfgns_28_24
+
+%assign    Start_body_fbfrayfgns_28_24 = ""
+%openfile  Start_body_fbfrayfgns_28_24
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "Start",0)
+%<SLibCGIRGenReusableSysCall("Start", [], 21, 0, 0, 0, 0, 28)>\
+%assign ss = ::CompiledModel.System[21]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%<tlcStartFcnOfS28B17>\
+%closefile Start_body_fbfrayfgns_28_24
+
+%assign    Start_close_fbfrayfgns_28_24 = ""
+%openfile  Start_close_fbfrayfgns_28_24
+
+/* End of Start for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt6' */
+%closefile Start_close_fbfrayfgns_28_24
+%<SLibCG_DumpSSCode(Start_open_fbfrayfgns_28_24, Start_body_fbfrayfgns_28_24, Start_close_fbfrayfgns_28_24)>
+
+%if !WHITE_SPACE(tlcStartFcnOfS28B19)
+
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcStartFcnOfS28B19>\
+%endif
+/* Start for DiscretePulseGenerator: '<S2>/Pulse Generator2' */
+iwjjzndxpci.oog13rjq3j = 0;
+%assign   Start_open_dacfknsmng_28_29 = ""
+%openfile Start_open_dacfknsmng_28_29
+
+/* Start for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt2' incorporates:
+ *  SubSystem: '<S2>/Subsystem3'
+ */
+%closefile Start_open_dacfknsmng_28_29
+
+%assign    Start_body_dacfknsmng_28_29 = ""
+%openfile  Start_body_dacfknsmng_28_29
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[15], "Start",0)
+%<SLibCGIRGenReusableSysCall("Start", [], 15, 0, 0, 0, 0, 28)>\
+%assign ss = ::CompiledModel.System[15]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%<tlcStartFcnOfS28B20>\
+%closefile Start_body_dacfknsmng_28_29
+
+%assign    Start_close_dacfknsmng_28_29 = ""
+%openfile  Start_close_dacfknsmng_28_29
+
+/* End of Start for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt2' */
+%closefile Start_close_dacfknsmng_28_29
+%<SLibCG_DumpSSCode(Start_open_dacfknsmng_28_29, Start_body_dacfknsmng_28_29, Start_close_dacfknsmng_28_29)>
+
+%if !WHITE_SPACE(tlcStartFcnOfS28B22)
+
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcStartFcnOfS28B22>\
+%endif
+/* Start for DiscretePulseGenerator: '<S2>/Pulse Generator3' */
+iwjjzndxpci.mj3yscbzmo = 0;
+%assign   Start_open_nmytj1jkn5_28_34 = ""
+%openfile Start_open_nmytj1jkn5_28_34
+
+/* Start for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt3' incorporates:
+ *  SubSystem: '<S2>/Subsystem4'
+ */
+%closefile Start_open_nmytj1jkn5_28_34
+
+%assign    Start_body_nmytj1jkn5_28_34 = ""
+%openfile  Start_body_nmytj1jkn5_28_34
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[18], "Start",0)
+%<SLibCGIRGenReusableSysCall("Start", [], 18, 0, 0, 0, 0, 28)>\
+%assign ss = ::CompiledModel.System[18]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+%endif
+%<tlcStartFcnOfS28B23>\
+%closefile Start_body_nmytj1jkn5_28_34
+
+%assign    Start_close_nmytj1jkn5_28_34 = ""
+%openfile  Start_close_nmytj1jkn5_28_34
+
+/* End of Start for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt3' */
+%closefile Start_close_nmytj1jkn5_28_34
+%<SLibCG_DumpSSCode(Start_open_nmytj1jkn5_28_34, Start_body_nmytj1jkn5_28_34, Start_close_nmytj1jkn5_28_34)>
+
+%if !WHITE_SPACE(tlcStartFcnOfS28B25)
+
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcStartFcnOfS28B25>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B26)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcStartFcnOfS28B26>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B27)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcStartFcnOfS28B27>\
+%endif
+/* Start for MATLABSystem: '<S2>/PWM' */
+iwjjzndxpci.gznau01d1x.matlabCodegenIsDeleted = false;
+iwjjzndxpci.b1kiaieblx = true;
+iwjjzndxpci.gznau01d1x.isSetupComplete = false;
+iwjjzndxpci.gznau01d1x.isInitialized = 1;
+iwjjzndxpci.gznau01d1x.PWMDriverObj.MW_PWM_HANDLE = MW_PWM_Open(2U, 4000.0, 255.0);
+iwjjzndxpci.gznau01d1x.isSetupComplete = true;
+/* Start for MATLABSystem: '<S2>/PWM2' */
+iwjjzndxpci.nwh0hsv4zj.matlabCodegenIsDeleted = false;
+iwjjzndxpci.iiga01blra = true;
+iwjjzndxpci.nwh0hsv4zj.isSetupComplete = false;
+iwjjzndxpci.nwh0hsv4zj.isInitialized = 1;
+iwjjzndxpci.nwh0hsv4zj.PWMDriverObj.MW_PWM_HANDLE = MW_PWM_Open(5U, 4000.0, 255.0);
+iwjjzndxpci.nwh0hsv4zj.isSetupComplete = true;
+/* Start for MATLABSystem: '<S2>/PWM3' */
+iwjjzndxpci.b2qvfmpjpm.matlabCodegenIsDeleted = false;
+iwjjzndxpci.a1la2rco0x = true;
+iwjjzndxpci.b2qvfmpjpm.isSetupComplete = false;
+iwjjzndxpci.b2qvfmpjpm.isInitialized = 1;
+iwjjzndxpci.b2qvfmpjpm.PWMDriverObj.MW_PWM_HANDLE = MW_PWM_Open(6U, 4000.0, 255.0);
+iwjjzndxpci.b2qvfmpjpm.isSetupComplete = true;
+%if !WHITE_SPACE(tlcStartFcnOfS28B35)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcStartFcnOfS28B35>\
+%endif
+%if !WHITE_SPACE(tlcStartFcnOfS28B36)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcStartFcnOfS28B36>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 6, fcnProtoType)>
+%endfunction

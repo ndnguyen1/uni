@@ -1,0 +1,70 @@
+%implements s34_b0_hejje_PublicModuleTypes "C"
+
+%function PublicModuleTypes(block) Output
+
+
+#ifndef struct_tag_pMPPJgn69ckPBhypf3vQzD
+#define struct_tag_pMPPJgn69ckPBhypf3vQzD
+struct tag_pMPPJgn69ckPBhypf3vQzD
+{
+    MW_Handle_Type MW_ANALOGIN_HANDLE;
+};
+#endif /* struct_tag_pMPPJgn69ckPBhypf3vQzD */
+#ifndef typedef_b5edmu4och
+#define typedef_b5edmu4och
+typedef struct tag_pMPPJgn69ckPBhypf3vQzD b5edmu4och;
+#endif /* typedef_b5edmu4och */
+#ifndef struct_tag_FIY6N64L77TlG9jHBRqBuB
+#define struct_tag_FIY6N64L77TlG9jHBRqBuB
+struct tag_FIY6N64L77TlG9jHBRqBuB
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    b5edmu4och AnalogInDriverObj;
+};
+#endif /* struct_tag_FIY6N64L77TlG9jHBRqBuB */
+#ifndef typedef_bpdlcr2dty
+#define typedef_bpdlcr2dty
+typedef struct tag_FIY6N64L77TlG9jHBRqBuB bpdlcr2dty;
+#endif /* typedef_bpdlcr2dty */
+#ifndef struct_tag_7VFuPw0vSNrn5pRgG8Mc4C
+#define struct_tag_7VFuPw0vSNrn5pRgG8Mc4C
+struct tag_7VFuPw0vSNrn5pRgG8Mc4C
+{
+    MW_Handle_Type MW_PWM_HANDLE;
+};
+#endif /* struct_tag_7VFuPw0vSNrn5pRgG8Mc4C */
+#ifndef typedef_gaoqv0q3bf
+#define typedef_gaoqv0q3bf
+typedef struct tag_7VFuPw0vSNrn5pRgG8Mc4C gaoqv0q3bf;
+#endif /* typedef_gaoqv0q3bf */
+#ifndef struct_tag_RWocY1aAVmuibq0rYX5t0G
+#define struct_tag_RWocY1aAVmuibq0rYX5t0G
+struct tag_RWocY1aAVmuibq0rYX5t0G
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    gaoqv0q3bf PWMDriverObj;
+};
+#endif /* struct_tag_RWocY1aAVmuibq0rYX5t0G */
+#ifndef typedef_gpnqeaki5j
+#define typedef_gpnqeaki5j
+typedef struct tag_RWocY1aAVmuibq0rYX5t0G gpnqeaki5j;
+#endif /* typedef_gpnqeaki5j */
+#ifndef struct_tag_lLXm9RMdC1wJGOFiPwVXeD
+#define struct_tag_lLXm9RMdC1wJGOFiPwVXeD
+struct tag_lLXm9RMdC1wJGOFiPwVXeD
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    dbh1agyeps DigitalIODriverObj;
+};
+#endif /* struct_tag_lLXm9RMdC1wJGOFiPwVXeD */
+#ifndef typedef_j3j5q2uowf
+#define typedef_j3j5q2uowf
+typedef struct tag_lLXm9RMdC1wJGOFiPwVXeD j3j5q2uowf;
+#endif /* typedef_j3j5q2uowf */
+%endfunction

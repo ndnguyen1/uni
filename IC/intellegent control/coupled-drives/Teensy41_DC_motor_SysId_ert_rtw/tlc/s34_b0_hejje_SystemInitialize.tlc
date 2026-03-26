@@ -1,0 +1,197 @@
+%implements s34_b0_hejje_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+/* {S!d1210}InitializeConditions for RateTransition generated from: '<S2>/Subsystem2' */
+iwjjzndxpci.ax003jihh5 = awlczcpqsa.TmpRTBAtSubsystem2Outport1_Init;
+/* {S!d1212}InitializeConditions for RateTransition generated from: '<S2>/Subsystem8' */
+iwjjzndxpci.evi1iarom4 = awlczcpqsa.TmpRTBAtSubsystem8Outport1_Init;
+/* {S!d1214}InitializeConditions for RateTransition generated from: '<S2>/Subsystem3' */
+iwjjzndxpci.a05uwz3sak = awlczcpqsa.TmpRTBAtSubsystem3Outport1_Init;
+/* {S!d1216}InitializeConditions for RateTransition generated from: '<S2>/Subsystem4' */
+iwjjzndxpci.mbtkqyvxq2 = awlczcpqsa.TmpRTBAtSubsystem4Outport1_Init;
+/* {S!d1187}SystemInitialize for Atomic SubSystem: '<Root>/Controller' */
+/* {S!d1188}SystemInitialize for Triggered SubSystem: '<S1>/Triggered Subsystem' */
+/* {S!d1218}SystemInitialize for SignalConversion generated from: '<S6>/In1' incorporates:
+ *  Outport: '<S6>/Vout 1'
+ */
+f1z2or5l1uw.j1hcksccre = awlczcpqsa.Vout1_Y0;
+/* {S!d1220}SystemInitialize for SignalConversion generated from: '<S6>/In2' incorporates:
+ *  Outport: '<S6>/Vout 2'
+ */
+f1z2or5l1uw.hkfjapfnh0 = awlczcpqsa.Vout2_Y0;
+/* {E!d1188}End of SystemInitialize for SubSystem: '<S1>/Triggered Subsystem' */
+
+/* {S!d1222}SystemInitialize for MATLAB Function: '<S1>/MATLAB Function' */
+iwjjzndxpci.pxjygwjgkj = mogqyttg3m;
+/* {E!d1187}End of SystemInitialize for SubSystem: '<Root>/Controller' */
+
+/* {S!d1191}SystemInitialize for Triggered SubSystem: '<S2>/Subsystem' */
+/* {S!d1224}SystemInitialize for Sum: '<S13>/Sum' incorporates:
+ *  Outport: '<S13>/Input 1'
+ */
+f1z2or5l1uw.lhnf1ckrfl = awlczcpqsa.Input1_Y0;
+/* {S!d1226}SystemInitialize for Sum: '<S13>/Sum1' incorporates:
+ *  Outport: '<S13>/Input 2'
+ */
+f1z2or5l1uw.jpk2jiiy2p = awlczcpqsa.Input2_Y0;
+/* {S!d1228}SystemInitialize for Sum: '<S13>/Sum2' incorporates:
+ *  Outport: '<S13>/Input 3'
+ */
+f1z2or5l1uw.p4f4vflnn4 = awlczcpqsa.Input3_Y0;
+/* {S!d1230}SystemInitialize for Sum: '<S13>/Sum3' incorporates:
+ *  Outport: '<S13>/Input 4'
+ */
+f1z2or5l1uw.jtluarl033 = awlczcpqsa.Input4_Y0;
+/* {S!d1232}SystemInitialize for Sum: '<S13>/Sum4' incorporates:
+ *  Outport: '<S13>/Slider'
+ */
+f1z2or5l1uw.nz4gunrrt1 = awlczcpqsa.Slider_Y0;
+/* {E!d1191}End of SystemInitialize for SubSystem: '<S2>/Subsystem' */
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[12], "SystemInitialize",0)
+
+/* {S!d1193}SystemInitialize for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt1' incorporates:
+ *  SubSystem: '<S2>/Subsystem2'
+ */
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 12, 0, 4, 0, 4, 28)>\
+%assign ss = ::CompiledModel.System[12]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1193}End of SystemInitialize for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt1' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[27], "SystemInitialize",0)
+
+/* {S!d1195}SystemInitialize for Triggered SubSystem: '<S2>/Triggered Subsystem1' */
+%if SLibCG_SystemFcnArgAccessed("nin4fdhu4g",27,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nin4fdhu4g", ["%<_modelSS>", "&f1z2or5l1uw.mkwt5njgv0l", "&awlczcpqsa.mkwt5njgv0l"], 27, 0, 4, 0, 4, 28)>\
+%assign ss = ::CompiledModel.System[27]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1195}End of SystemInitialize for SubSystem: '<S2>/Triggered Subsystem1' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "SystemInitialize",0)
+
+/* {S!d1197}SystemInitialize for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt6' incorporates:
+ *  SubSystem: '<S2>/Subsystem8'
+ */
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 21, 0, 4, 0, 4, 28)>\
+%assign ss = ::CompiledModel.System[21]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1197}End of SystemInitialize for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt6' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[27], "SystemInitialize",0)
+
+/* {S!d1199}SystemInitialize for Triggered SubSystem: '<S2>/Triggered Subsystem3' */
+%if SLibCG_SystemFcnArgAccessed("nin4fdhu4g",27,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nin4fdhu4g", ["%<_modelSS>", "&f1z2or5l1uw.oemudkjzbq", "&awlczcpqsa.oemudkjzbq"], 27, 2, 4, 0, 4, 28)>\
+%assign ss = ::CompiledModel.System[27]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1199}End of SystemInitialize for SubSystem: '<S2>/Triggered Subsystem3' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[15], "SystemInitialize",0)
+
+/* {S!d1201}SystemInitialize for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt2' incorporates:
+ *  SubSystem: '<S2>/Subsystem3'
+ */
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 15, 0, 4, 0, 4, 28)>\
+%assign ss = ::CompiledModel.System[15]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1201}End of SystemInitialize for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt2' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[27], "SystemInitialize",0)
+
+/* {S!d1203}SystemInitialize for Triggered SubSystem: '<S2>/Triggered Subsystem2' */
+%if SLibCG_SystemFcnArgAccessed("nin4fdhu4g",27,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nin4fdhu4g", ["%<_modelSS>", "&f1z2or5l1uw.nunjlfjvhv", "&awlczcpqsa.nunjlfjvhv"], 27, 1, 4, 0, 4, 28)>\
+%assign ss = ::CompiledModel.System[27]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1203}End of SystemInitialize for SubSystem: '<S2>/Triggered Subsystem2' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[18], "SystemInitialize",0)
+
+/* {S!d1205}SystemInitialize for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt3' incorporates:
+ *  SubSystem: '<S2>/Subsystem4'
+ */
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 18, 0, 4, 0, 4, 28)>\
+%assign ss = ::CompiledModel.System[18]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1205}End of SystemInitialize for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt3' */
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[27], "SystemInitialize",0)
+
+/* {S!d1207}SystemInitialize for Triggered SubSystem: '<S2>/Triggered Subsystem4' */
+%if SLibCG_SystemFcnArgAccessed("nin4fdhu4g",27,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("nin4fdhu4g", ["%<_modelSS>", "&f1z2or5l1uw.op3oitaiss", "&awlczcpqsa.op3oitaiss"], 27, 3, 4, 0, 4, 28)>\
+%assign ss = ::CompiledModel.System[27]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1207}End of SystemInitialize for SubSystem: '<S2>/Triggered Subsystem4' */
+%endif
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 7, fcnProtoType)>
+%endfunction

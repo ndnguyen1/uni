@@ -1,0 +1,28 @@
+%implements s34_b0_hejje_4_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* {S!d1068}Terminate for MATLABSystem: '<S17>/Digital Input6' */
+if (!iwjjzndxpci.oz2fasvcn2.matlabCodegenIsDeleted) {
+    iwjjzndxpci.oz2fasvcn2.matlabCodegenIsDeleted = true;
+}
+/* {E!d1068}End of Terminate for MATLABSystem: '<S17>/Digital Input6' */
+
+/* {S!d1070}Terminate for MATLABSystem: '<S17>/Digital Input7' */
+if (!iwjjzndxpci.j3nos2ilvi.matlabCodegenIsDeleted) {
+    iwjjzndxpci.j3nos2ilvi.matlabCodegenIsDeleted = true;
+}
+/* {E!d1070}End of Terminate for MATLABSystem: '<S17>/Digital Input7' */
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 4, fcnProtoType)>
+%endfunction

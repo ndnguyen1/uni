@@ -1,0 +1,37 @@
+%implements s34_b0_hejje_4_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign _modelSS = ""
+
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[11], "SystemInitialize",5)
+/* SystemInitialize for MATLAB Function: '<S17>/MATLAB Function1' */
+%if SLibCG_SystemFcnArgAccessed("lvyqqevxwo",11,0)
+%assign _modelSS = RTMGetModelSSFromIR()
+%endif
+
+%<SLibCGIRGenReusableSysCall("lvyqqevxwo", ["%<_modelSS>", "&iwjjzndxpci.kjymljq5j4"], 11, 2, 4, 5, 4, 28)>\
+%assign ss = ::CompiledModel.System[11]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+%endif
+/* SystemInitialize for Outport: '<S17>/counts' */
+f1z2or5l1uw.kjymljq5j4.i0wur10vun = awlczcpqsa.counts_Y0_oepo5kyl0s;
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedSystemInitializeLocalVars", localVarDecl)>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 1, fcnProtoType)>
+%endfunction

@@ -1,0 +1,159 @@
+%implements s34_b0_hejje_Functions "C"
+
+%function rt_roundd_snf_Fcn0(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+real_T y;
+if (fabs(u) < 4.503599627370496E+15) {
+    if (u >= 0.5) {
+        y = floor(u + 0.5);
+    } else if (u > -0.5) {
+        y = u * 0.0;
+    } else {
+        y = ceil(u - 0.5);
+    }
+} else {
+    y = u;
+}
+return y;
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+extern real_T rt_roundd_snf(\
+%assign comma = ""
+%<comma>real_T u\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 0, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ea02exjunxc_Fcn1(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* {S!d1492}Start for MATLABSystem: '<S2>/PWM1' */
+if ((obj->isInitialized == 1) && obj->isSetupComplete) {
+    obj->PWMDriverObj.MW_PWM_HANDLE = MW_PWM_GetHandle(4U);
+    MW_PWM_SetDutyCycle(obj->PWMDriverObj.MW_PWM_HANDLE, -0.0);
+    obj->PWMDriverObj.MW_PWM_HANDLE = MW_PWM_GetHandle(4U);
+    MW_PWM_Close(obj->PWMDriverObj.MW_PWM_HANDLE);
+}
+/* {E!d1492}End of Start for MATLABSystem: '<S2>/PWM1' */
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ea02exjunxc(\
+%assign comma = ""
+%<comma>gpnqeaki5j *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 1, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ea02exjunx_Fcn2(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* {S!d1490}Start for MATLABSystem: '<S2>/PWM' */
+if ((obj->isInitialized == 1) && obj->isSetupComplete) {
+    obj->PWMDriverObj.MW_PWM_HANDLE = MW_PWM_GetHandle(2U);
+    MW_PWM_SetDutyCycle(obj->PWMDriverObj.MW_PWM_HANDLE, -0.0);
+    obj->PWMDriverObj.MW_PWM_HANDLE = MW_PWM_GetHandle(2U);
+    MW_PWM_Close(obj->PWMDriverObj.MW_PWM_HANDLE);
+}
+/* {E!d1490}End of Start for MATLABSystem: '<S2>/PWM' */
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ea02exjunx(\
+%assign comma = ""
+%<comma>gpnqeaki5j *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 2, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ea02exjunxc1_Fcn3(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* {S!d1494}Start for MATLABSystem: '<S2>/PWM2' */
+if ((obj->isInitialized == 1) && obj->isSetupComplete) {
+    obj->PWMDriverObj.MW_PWM_HANDLE = MW_PWM_GetHandle(5U);
+    MW_PWM_SetDutyCycle(obj->PWMDriverObj.MW_PWM_HANDLE, -0.0);
+    obj->PWMDriverObj.MW_PWM_HANDLE = MW_PWM_GetHandle(5U);
+    MW_PWM_Close(obj->PWMDriverObj.MW_PWM_HANDLE);
+}
+/* {E!d1494}End of Start for MATLABSystem: '<S2>/PWM2' */
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ea02exjunxc1(\
+%assign comma = ""
+%<comma>gpnqeaki5j *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 3, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function ea02exjunxc12_Fcn4(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+/* {S!d1496}Start for MATLABSystem: '<S2>/PWM3' */
+if ((obj->isInitialized == 1) && obj->isSetupComplete) {
+    obj->PWMDriverObj.MW_PWM_HANDLE = MW_PWM_GetHandle(6U);
+    MW_PWM_SetDutyCycle(obj->PWMDriverObj.MW_PWM_HANDLE, -0.0);
+    obj->PWMDriverObj.MW_PWM_HANDLE = MW_PWM_GetHandle(6U);
+    MW_PWM_Close(obj->PWMDriverObj.MW_PWM_HANDLE);
+}
+/* {E!d1496}End of Start for MATLABSystem: '<S2>/PWM3' */
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ea02exjunxc12(\
+%assign comma = ""
+%<comma>gpnqeaki5j *obj\
+%assign comma = ", "
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 4, fcnProtoType)>
+%return fcnBuff
+%endfunction
+
+%function jac41me4am_Fcn5(block) void
+%assign fcnBuff = ""
+%openfile fcnBuff
+%assign cfgTxt = ""
+%openfile cfgTxt
+%closefile cfgTxt
+%<cfgTxt>
+%closefile fcnBuff
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void jac41me4am(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 5, fcnProtoType)>
+%return fcnBuff
+%endfunction
+

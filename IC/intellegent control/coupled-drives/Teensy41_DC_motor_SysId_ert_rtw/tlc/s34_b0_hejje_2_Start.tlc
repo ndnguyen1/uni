@@ -1,0 +1,29 @@
+%implements s34_b0_hejje_2_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* Start for MATLABSystem: '<S15>/Digital Input6' */
+iwjjzndxpci.m1ctw4ecsv.matlabCodegenIsDeleted = false;
+iwjjzndxpci.d2xcxmjktl = true;
+iwjjzndxpci.m1ctw4ecsv.isInitialized = 1;
+digitalIOSetup(39, 0);
+iwjjzndxpci.m1ctw4ecsv.isSetupComplete = true;
+/* Start for MATLABSystem: '<S15>/Digital Input7' */
+iwjjzndxpci.i0kzzfe3mh.matlabCodegenIsDeleted = false;
+iwjjzndxpci.kwoyg5gjgo = true;
+iwjjzndxpci.i0kzzfe3mh.isInitialized = 1;
+digitalIOSetup(37, 0);
+iwjjzndxpci.i0kzzfe3mh.isSetupComplete = true;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 0, fcnProtoType)>
+%endfunction

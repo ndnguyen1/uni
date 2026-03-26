@@ -1,0 +1,30 @@
+%implements s34_b0_hejje_2_PublicModuleTypes "C"
+
+%function PublicModuleTypes(block) Output
+
+#ifndef struct_tag_um27AmhtbslH2i5VSgy0RG
+#define struct_tag_um27AmhtbslH2i5VSgy0RG
+struct tag_um27AmhtbslH2i5VSgy0RG
+{
+    int32_T __dummy;
+};
+#endif /* struct_tag_um27AmhtbslH2i5VSgy0RG */
+#ifndef typedef_dbh1agyeps
+#define typedef_dbh1agyeps
+typedef struct tag_um27AmhtbslH2i5VSgy0RG dbh1agyeps;
+#endif /* typedef_dbh1agyeps */
+#ifndef struct_tag_K141Lr1msBEpKSHKabbA6B
+#define struct_tag_K141Lr1msBEpKSHKabbA6B
+struct tag_K141Lr1msBEpKSHKabbA6B
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    dbh1agyeps DigitalIODriverObj;
+};
+#endif /* struct_tag_K141Lr1msBEpKSHKabbA6B */
+#ifndef typedef_cw5sno1woc
+#define typedef_cw5sno1woc
+typedef struct tag_K141Lr1msBEpKSHKabbA6B cw5sno1woc;
+#endif /* typedef_cw5sno1woc */
+%endfunction

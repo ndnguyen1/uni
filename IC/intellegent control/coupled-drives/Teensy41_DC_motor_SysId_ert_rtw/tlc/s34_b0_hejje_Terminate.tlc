@@ -1,0 +1,321 @@
+%implements s34_b0_hejje_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcTerminateFcnOfS28B6 = OpaqueTLCBlockFcn("Terminate", 28, 6, 6, 15, 0)
+%assign tlcTerminateFcnOfS28B7 = OpaqueTLCBlockFcn("Terminate", 28, 7, 6, 15, 1)
+%assign tlcTerminateFcnOfS28B8 = OpaqueTLCBlockFcn("Terminate", 28, 8, 6, 15, 2)
+%assign tlcTerminateFcnOfS28B9 = OpaqueTLCBlockFcn("Terminate", 28, 9, 6, 15, 3)
+%assign tlcTerminateFcnOfS28B10 = OpaqueTLCBlockFcn("Terminate", 28, 10, 6, 15, 4)
+%assign tlcTerminateFcnOfS28B12 = OpaqueTLCBlockFcn("Terminate", 28, 12, 6, 15, 5)
+%assign tlcTerminateFcnOfS28B14 = OpaqueTLCBlockFcn("Terminate", 28, 14, 6, 15, 6)
+%assign tlcTerminateFcnOfS28B17 = OpaqueTLCBlockFcn("Terminate", 28, 17, 6, 15, 7)
+%assign tlcTerminateFcnOfS28B19 = OpaqueTLCBlockFcn("Terminate", 28, 19, 6, 15, 8)
+%assign tlcTerminateFcnOfS28B20 = OpaqueTLCBlockFcn("Terminate", 28, 20, 6, 15, 9)
+%assign tlcTerminateFcnOfS28B22 = OpaqueTLCBlockFcn("Terminate", 28, 22, 6, 15, 10)
+%assign tlcTerminateFcnOfS28B23 = OpaqueTLCBlockFcn("Terminate", 28, 23, 6, 15, 11)
+%assign tlcTerminateFcnOfS28B25 = OpaqueTLCBlockFcn("Terminate", 28, 25, 6, 15, 12)
+%assign tlcTerminateFcnOfS28B26 = OpaqueTLCBlockFcn("Terminate", 28, 26, 6, 15, 13)
+%assign tlcTerminateFcnOfS28B27 = OpaqueTLCBlockFcn("Terminate", 28, 27, 6, 15, 14)
+%assign tlcTerminateFcnOfS28B35 = OpaqueTLCBlockFcn("Terminate", 28, 35, 6, 15, 15)
+%assign tlcTerminateFcnOfS28B36 = OpaqueTLCBlockFcn("Terminate", 28, 36, 6, 15, 16)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B6 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 6, 6, 15, 17)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B7 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 7, 6, 15, 18)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B8 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 8, 6, 15, 19)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B9 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 9, 6, 15, 20)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B10 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 10, 6, 15, 21)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B14 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 14, 6, 15, 22)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B19 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 19, 6, 15, 23)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B22 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 22, 6, 15, 24)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B25 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 25, 6, 15, 25)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B26 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 26, 6, 15, 26)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B27 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 27, 6, 15, 27)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B35 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 35, 6, 15, 28)
+%assign tlcCleanupRuntimeResourcesFcnOfS28B36 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 28, 36, 6, 15, 29)
+/* {S!d1418}Terminate for MATLABSystem: '<S2>/Analog Input' */
+if (!iwjjzndxpci.i4hu42h4gb.matlabCodegenIsDeleted) {
+    iwjjzndxpci.i4hu42h4gb.matlabCodegenIsDeleted = true;
+    if ((iwjjzndxpci.i4hu42h4gb.isInitialized == 1) && iwjjzndxpci.i4hu42h4gb.isSetupComplete) {
+        iwjjzndxpci.i4hu42h4gb.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogIn_GetHandle(16U);
+        MW_AnalogIn_Close(iwjjzndxpci.i4hu42h4gb.AnalogInDriverObj.MW_ANALOGIN_HANDLE);
+    }
+}
+/* {E!d1418}End of Terminate for MATLABSystem: '<S2>/Analog Input' */
+
+/* {S!d1420}Terminate for MATLABSystem: '<S2>/Analog Input1' */
+if (!iwjjzndxpci.jrvbelfdsl.matlabCodegenIsDeleted) {
+    iwjjzndxpci.jrvbelfdsl.matlabCodegenIsDeleted = true;
+    if ((iwjjzndxpci.jrvbelfdsl.isInitialized == 1) && iwjjzndxpci.jrvbelfdsl.isSetupComplete) {
+        iwjjzndxpci.jrvbelfdsl.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogIn_GetHandle(17U);
+        MW_AnalogIn_Close(iwjjzndxpci.jrvbelfdsl.AnalogInDriverObj.MW_ANALOGIN_HANDLE);
+    }
+}
+/* {E!d1420}End of Terminate for MATLABSystem: '<S2>/Analog Input1' */
+
+/* {S!d1422}Terminate for MATLABSystem: '<S2>/Analog Input2' */
+if (!iwjjzndxpci.dcin5spbb3.matlabCodegenIsDeleted) {
+    iwjjzndxpci.dcin5spbb3.matlabCodegenIsDeleted = true;
+    if ((iwjjzndxpci.dcin5spbb3.isInitialized == 1) && iwjjzndxpci.dcin5spbb3.isSetupComplete) {
+        iwjjzndxpci.dcin5spbb3.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogIn_GetHandle(20U);
+        MW_AnalogIn_Close(iwjjzndxpci.dcin5spbb3.AnalogInDriverObj.MW_ANALOGIN_HANDLE);
+    }
+}
+/* {E!d1422}End of Terminate for MATLABSystem: '<S2>/Analog Input2' */
+
+/* {S!d1424}Terminate for MATLABSystem: '<S2>/Analog Input3' */
+if (!iwjjzndxpci.hboj4n3sav.matlabCodegenIsDeleted) {
+    iwjjzndxpci.hboj4n3sav.matlabCodegenIsDeleted = true;
+    if ((iwjjzndxpci.hboj4n3sav.isInitialized == 1) && iwjjzndxpci.hboj4n3sav.isSetupComplete) {
+        iwjjzndxpci.hboj4n3sav.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogIn_GetHandle(21U);
+        MW_AnalogIn_Close(iwjjzndxpci.hboj4n3sav.AnalogInDriverObj.MW_ANALOGIN_HANDLE);
+    }
+}
+/* {E!d1424}End of Terminate for MATLABSystem: '<S2>/Analog Input3' */
+
+/* {S!d1426}Terminate for MATLABSystem: '<S2>/Analog Input4' */
+if (!iwjjzndxpci.ilh1w3p1w5.matlabCodegenIsDeleted) {
+    iwjjzndxpci.ilh1w3p1w5.matlabCodegenIsDeleted = true;
+    if ((iwjjzndxpci.ilh1w3p1w5.isInitialized == 1) && iwjjzndxpci.ilh1w3p1w5.isSetupComplete) {
+        iwjjzndxpci.ilh1w3p1w5.AnalogInDriverObj.MW_ANALOGIN_HANDLE = MW_AnalogIn_GetHandle(15U);
+        MW_AnalogIn_Close(iwjjzndxpci.ilh1w3p1w5.AnalogInDriverObj.MW_ANALOGIN_HANDLE);
+    }
+}
+/* {E!d1426}End of Terminate for MATLABSystem: '<S2>/Analog Input4' */
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B6)
+
+/* {S!d1428}Terminate for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcTerminateFcnOfS28B6>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B7)
+/* {S!d1430}Terminate for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcTerminateFcnOfS28B7>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B8)
+/* {S!d1432}Terminate for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcTerminateFcnOfS28B8>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B9)
+/* {S!d1434}Terminate for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcTerminateFcnOfS28B9>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B10)
+/* {S!d1436}Terminate for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcTerminateFcnOfS28B10>\
+%endif
+/* {S!d1399}Terminate for Atomic SubSystem: '<Root>/Controller' */
+/* {S!d1438}Terminate for MATLABSystem: '<S1>/Digital Output' */
+if (!iwjjzndxpci.gq55jxne1e.matlabCodegenIsDeleted) {
+    iwjjzndxpci.gq55jxne1e.matlabCodegenIsDeleted = true;
+}
+/* {E!d1438}End of Terminate for MATLABSystem: '<S1>/Digital Output' */
+/* {E!d1399}End of Terminate for SubSystem: '<Root>/Controller' */
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B12)
+
+/* {S!d1401}Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt1' */
+%<tlcTerminateFcnOfS28B12>\
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[12], "Terminate",0)
+/* {E!d1401}End of Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt1' */
+
+/* {S!d1403}Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt1' incorporates:
+ *  SubSystem: '<S2>/Subsystem2'
+ */
+%<SLibCGIRGenReusableSysCall("Terminate", [], 12, 0, 18, 0, 18, 28)>\
+%assign ss = ::CompiledModel.System[12]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1403}End of Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt1' */
+
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B14)
+/* {S!d1440}Terminate for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcTerminateFcnOfS28B14>\
+%endif
+/* {S!d1442}Terminate for MATLABSystem: '<S2>/PWM1' */
+if (!iwjjzndxpci.jhea4a3mej.matlabCodegenIsDeleted) {
+    iwjjzndxpci.jhea4a3mej.matlabCodegenIsDeleted = true;
+    %<(SLibCGCallSubFcn("ea02exjunxc", ["&iwjjzndxpci.jhea4a3mej"], 6, 15, 0))>;
+}
+/* {E!d1442}End of Terminate for MATLABSystem: '<S2>/PWM1' */
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B17)
+
+/* {S!d1405}Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt6' */
+%<tlcTerminateFcnOfS28B17>\
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[21], "Terminate",0)
+/* {E!d1405}End of Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt6' */
+
+/* {S!d1407}Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt6' incorporates:
+ *  SubSystem: '<S2>/Subsystem8'
+ */
+%<SLibCGIRGenReusableSysCall("Terminate", [], 21, 0, 18, 0, 18, 28)>\
+%assign ss = ::CompiledModel.System[21]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1407}End of Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt6' */
+
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B19)
+/* {S!d1444}Terminate for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcTerminateFcnOfS28B19>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B20)
+/* {S!d1409}Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt2' */
+%<tlcTerminateFcnOfS28B20>\
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[15], "Terminate",0)
+/* {E!d1409}End of Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt2' */
+
+/* {S!d1411}Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt2' incorporates:
+ *  SubSystem: '<S2>/Subsystem3'
+ */
+%<SLibCGIRGenReusableSysCall("Terminate", [], 15, 0, 18, 0, 18, 28)>\
+%assign ss = ::CompiledModel.System[15]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1411}End of Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt2' */
+
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B22)
+/* {S!d1446}Terminate for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcTerminateFcnOfS28B22>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B23)
+/* {S!d1413}Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt3' */
+%<tlcTerminateFcnOfS28B23>\
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[18], "Terminate",0)
+/* {E!d1413}End of Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt3' */
+
+/* {S!d1415}Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt3' incorporates:
+ *  SubSystem: '<S2>/Subsystem4'
+ */
+%<SLibCGIRGenReusableSysCall("Terminate", [], 18, 0, 18, 0, 18, 28)>\
+%assign ss = ::CompiledModel.System[18]
+%if !LibSystemIsInlined(ss)
+;
+%else
+\
+%endif
+
+/* {E!d1415}End of Terminate for S-Function (arduinoextint_sfcn): '<S2>/External Interrupt3' */
+
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B25)
+/* {S!d1448}Terminate for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcTerminateFcnOfS28B25>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B26)
+/* {S!d1450}Terminate for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcTerminateFcnOfS28B26>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B27)
+/* {S!d1452}Terminate for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcTerminateFcnOfS28B27>\
+%endif
+/* {S!d1454}Terminate for MATLABSystem: '<S2>/PWM' */
+if (!iwjjzndxpci.gznau01d1x.matlabCodegenIsDeleted) {
+    iwjjzndxpci.gznau01d1x.matlabCodegenIsDeleted = true;
+    %<(SLibCGCallSubFcn("ea02exjunx", ["&iwjjzndxpci.gznau01d1x"], 6, 15, 1))>;
+}
+/* {E!d1454}End of Terminate for MATLABSystem: '<S2>/PWM' */
+
+/* {S!d1456}Terminate for MATLABSystem: '<S2>/PWM2' */
+if (!iwjjzndxpci.nwh0hsv4zj.matlabCodegenIsDeleted) {
+    iwjjzndxpci.nwh0hsv4zj.matlabCodegenIsDeleted = true;
+    %<(SLibCGCallSubFcn("ea02exjunxc1", ["&iwjjzndxpci.nwh0hsv4zj"], 6, 15, 2))>;
+}
+/* {E!d1456}End of Terminate for MATLABSystem: '<S2>/PWM2' */
+
+/* {S!d1458}Terminate for MATLABSystem: '<S2>/PWM3' */
+if (!iwjjzndxpci.b2qvfmpjpm.matlabCodegenIsDeleted) {
+    iwjjzndxpci.b2qvfmpjpm.matlabCodegenIsDeleted = true;
+    %<(SLibCGCallSubFcn("ea02exjunxc12", ["&iwjjzndxpci.b2qvfmpjpm"], 6, 15, 3))>;
+}
+/* {E!d1458}End of Terminate for MATLABSystem: '<S2>/PWM3' */
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B35)
+
+/* {S!d1460}Terminate for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcTerminateFcnOfS28B35>\
+%endif
+%if !WHITE_SPACE(tlcTerminateFcnOfS28B36)
+/* {S!d1462}Terminate for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcTerminateFcnOfS28B36>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B6)
+/* {S!d1464}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B6>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B7)
+/* {S!d1466}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B7>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B8)
+/* {S!d1468}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B8>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B9)
+/* {S!d1470}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B9>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B10)
+/* {S!d1472}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B10>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B14)
+/* {S!d1474}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B14>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B19)
+/* {S!d1476}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B19>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B22)
+/* {S!d1478}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B22>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B25)
+/* {S!d1480}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Subsystem' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B25>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B26)
+/* {S!d1482}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B26>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B27)
+/* {S!d1484}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B27>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B35)
+/* {S!d1486}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B35>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS28B36)
+/* {S!d1488}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/Controller' */
+%<tlcCleanupRuntimeResourcesFcnOfS28B36>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 15, fcnProtoType)>
+%endfunction

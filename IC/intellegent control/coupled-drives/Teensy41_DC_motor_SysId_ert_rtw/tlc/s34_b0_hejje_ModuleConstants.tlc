@@ -1,0 +1,8 @@
+%implements s34_b0_hejje_ModuleConstants "C"
+
+%function ModuleConstants(block) Output
+
+
+/* Named constants for MATLAB Function: '<S1>/MATLAB Function' */
+#define mogqyttg3m (-1)
+%endfunction
