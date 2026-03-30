@@ -26,17 +26,13 @@ figure;
 compare(data_id, sys_est);
 title('Model Fit');
 
-%% Step 4: LQR Controller with output weighting
-C_kf = C;
+%% Step 4: Pole Placement Controller
+C_kf      = C;
+s_desired = [-4+2j, -4-2j, -10, -10, -15];
+Pz        = exp(s_desired * Ts);
+K         = place(Ad, Bd, Pz);
 
-% Output weight — penalise w and alpha error directly in volt units
-Q_y   = diag([1, 10]);          % weight on [w, alpha] outputs
-Q_lqr = C_kf' * Q_y * C_kf;     % maps output penalty back to state space (5x5)
-R_lqr = diag([1, 1]);
-
-K = dlqr(Ad, Bd, Q_lqr, R_lqr);
-
-fprintf('\n--- Closed-loop eigenvalues (LQR) ---\n');
+fprintf('\n--- Closed-loop eigenvalues ---\n');
 disp(abs(eig(Ad - Bd*K)))
 
 %% Step 5: Kalman Observer

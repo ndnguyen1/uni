@@ -1,3 +1,6 @@
+iclc; clear;
+load('Teensy41_test_data_01.mat')
+
 
 sig = @(s) deal(s.Values.Time, squeeze(s.Values.Data));
 

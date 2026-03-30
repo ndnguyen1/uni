@@ -1,8 +1,0 @@
-%implements s34_b0_hejje_0_ModuleConstants "C"
-
-%function ModuleConstants(block) Output
-
-
-/* Named constants for MATLAB Function: '<S15>/MATLAB Function1' */
-#define gtjl1dvdoq (-1)
-%endfunction
