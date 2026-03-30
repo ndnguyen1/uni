@@ -7,8 +7,8 @@ time     = logsout{1}.Values.Time(Nini:end-1);
 time     = time - time(1);
 Vm_left  = squeeze(logsout{1}.Values.Data(Nini:end-1));
 Vm_right = squeeze(logsout{2}.Values.Data(Nini:end-1));
-w_v      = squeeze(logsout{10}.Values.Data(Nini:end-1));
-alpha_v  = squeeze(logsout{9}.Values.Data(Nini:end-1));
+w_v      = squeeze(logsout{9}.Values.Data(Nini:end-1));
+alpha_v  = squeeze(logsout{10}.Values.Data(Nini:end-1));
 
 %% Step 2: System Identification — order-5 discrete-time model
 Ts      = time(2) - time(1);
