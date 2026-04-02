@@ -40,8 +40,8 @@ fprintf('\n--- Closed-loop eigenvalues (LQR) ---\n');
 disp(abs(eig(Ad - Bd*K)))
 
 %% Step 5: Kalman Observer
-Q_kf = diag([1e-2, 1e-2, 1e-1, 1e-1, 1e-1]);
-R_kf = diag([1e-2, 1e-2]);
+Q_kf = diag([1e-3, 1e-3, 1e-2, 1e-2, 1e-2]);
+R_kf = diag([1, 1]); 
 P    = dare(Ad', C_kf', Q_kf, R_kf);
 L    = P * C_kf' / (C_kf * P * C_kf' + R_kf);
 

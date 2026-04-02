@@ -32,7 +32,7 @@
       Description  "EmlPersistent"\
       SFName       ""\
       Path         ""\
-      SrcLocation  "Teensy41_DC_motor_SysId:603:800-805"\
+      SrcLocation  "Teensy41_DC_motor_SysId:603:339-344"\
       Dimensions   [5]\
     }\
     ChartData {\
@@ -40,7 +40,7 @@
       Description  "EmlPersistentSentinel"\
       SFName       ""\
       Path         ""\
-      SrcLocation  "Teensy41_DC_motor_SysId:603:800-805"\
+      SrcLocation  "Teensy41_DC_motor_SysId:603:339-344"\
     }\
   }
   %return ChartDataElements
